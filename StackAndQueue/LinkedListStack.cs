@@ -28,6 +28,27 @@ namespace StackAndQueue
             this.top = node;
             Console.WriteLine("{0}Pushed to Stack", value);
         }
+
+        //UC2-PeekAndPop
+        public void Peak()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is Empty");
+                return;
+            }
+            Console.WriteLine("{0} is in the top of stack", this.top.data);
+        }
+        public void Pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is Empty,Deletion is not possible");
+                return;
+            }
+            Console.WriteLine("Value popped is {0}", this.top.data);
+            this.top = this.top.next;
+        }
         public void Display()
         {
             Node temp = this.top;
